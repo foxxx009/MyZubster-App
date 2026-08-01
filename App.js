@@ -16,6 +16,12 @@ import ProfileScreen from './app/screens/ProfileScreen';
 import ReviewsScreen from './app/screens/ReviewsScreen';
 import MapScreen from './app/screens/MapScreen';
 import NotificationsScreen from './app/screens/NotificationsScreen';
+import RewardsScreen from './app/screens/RewardsScreen';
+import UrbanReportScreen from './app/screens/UrbanReportScreen';
+import MunicipalReportsScreen from './app/screens/MunicipalReportsScreen';
+import GamificationScreen from './app/screens/GamificationScreen';
+import MunicipalDashboardScreen from './app/screens/MunicipalDashboardScreen';
+import { initPrivacyPreferences } from './app/services/privacyService';
 import NotificationManager from './app/components/NotificationManager';
 import { navigationRef } from './app/navigation/navigationRef';
 
@@ -51,6 +57,11 @@ function AppNavigator() {
           <Stack.Screen name="Reviews" component={ReviewsScreen} />
           <Stack.Screen name="Map" component={MapScreen} />
           <Stack.Screen name="Notifications" component={NotificationsScreen} />
+          <Stack.Screen name="Rewards" component={RewardsScreen} />
+          <Stack.Screen name="UrbanReport" component={UrbanReportScreen} />
+          <Stack.Screen name="MunicipalReports" component={MunicipalReportsScreen} />
+          <Stack.Screen name="Gamification" component={GamificationScreen} />
+          <Stack.Screen name="MunicipalDashboard" component={MunicipalDashboardScreen} />
         </>
       )}
     </Stack.Navigator>
@@ -58,6 +69,7 @@ function AppNavigator() {
 }
 
 export default function App() {
+  React.useEffect(() => { initPrivacyPreferences(); }, []);
   return (
     <LanguageProvider>
       <AuthProvider>

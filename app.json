@@ -1,9 +1,8 @@
 {
   "expo": {
-    "name": "MyZubster App",
+    "name": "MyZubster",
     "slug": "myzubster-app",
     "version": "1.0.0",
-    "scheme": "myzubster",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,30 +15,37 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.myzubster.app"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.myzubster.app",
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
+        "POST_NOTIFICATIONS",
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE",
-        "RECORD_AUDIO"
+        "RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
       ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "plugins": [
+      "expo-notifications",
+      "expo-location",
+      "expo-secure-store"
+    ],
+    "scheme": "myzubster",
     "extra": {
       "eas": {
-        "projectId": "your-project-id-here"
+        "projectId": "066d68ca-b5ec-4ec3-94cf-e5cf8890718d"
       }
     }
   }
