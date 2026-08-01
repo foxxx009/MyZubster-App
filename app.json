@@ -37,6 +37,11 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "plugins": [
+      "expo-camera",
+      "expo-location",
+      "expo-secure-store"
+    ],
     "extra": {
       "eas": {
         "projectId": "your-project-id-here"
